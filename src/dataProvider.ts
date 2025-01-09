@@ -2,7 +2,7 @@ import { DataProvider, fetchUtils } from "react-admin";
 import { stringify } from "query-string";
 
 // const apiUrl = import.meta.env.PORTFOLIO_API_URL;
-const apiUrl = 'https://portfolio-api-nq76.onrender.com/api';
+const apiUrl = import.meta.env.PORTFOLIO_API_URL || 'https://portfolio-api-nq76.onrender.com/api';
 const httpClient = fetchUtils.fetchJson;
 
 export const dataProvider: DataProvider = {
