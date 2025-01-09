@@ -31,15 +31,24 @@ export const dataProvider: DataProvider = {
             };
         });
     },
-    getOne: (resource, params) =>
-        httpClient(`${apiUrl}/${resource}/${params.id}`).then(({ json }) => ({
-            data: {
-                ...json,
-                id: json._id,
-                createdAt: new Date(json.createdAt),
-                updatedAt: new Date(json.updatedAt),
-            },
-        })),
+    getOne: (resource, params) => {
+        const url = `${apiUrl}/${resource.slice(0, -1)}/${params.id}`;
+        console.log('Fetching single resource:', url);
+        
+        return httpClient(url)
+            .then(({ json }) => ({
+                data: {
+                    ...json,
+                    id: json._id,
+                    createdAt: new Date(json.createdAt),
+                    updatedAt: new Date(json.updatedAt),
+                },
+            }))
+            .catch(error => {
+                console.error('Error fetching resource:', error);
+                throw error;
+            });
+    },
     getMany: () => Promise.resolve({ data: [] }),
     getManyReference: () => Promise.resolve({ data: [], total: 0 }),
     create: (resource, params) =>
