@@ -42,9 +42,14 @@ const TagsField = () => {
   );
 };
 
+const ProjectPanel = () => {
+  const record = useRecordContext();
+  return <div>{record?.description}</div>;
+};
+
 export const ProjectsList = () => (
   <List>
-    <Datagrid>
+    <Datagrid expand={ProjectPanel}>
       <ReferenceField source="_id" reference="projects" />
       <TextField source="id" />
       <TextField source="title" />
