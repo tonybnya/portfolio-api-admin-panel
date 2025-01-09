@@ -29,21 +29,18 @@ export const ProjectsList = () => (
         },
       }}
     >
-      <ReferenceField source="_id" reference="projects" />
-      <TextField source="id" />
       <TextField source="title" />
-      {/* <TextField source="description" /> */}
       <FunctionField
         label="Excerpt"
         render={(record) => `${record.description.substring(0, 50)}...`}
       />
 
       <TagsField source="tags" />
-      {/* <UrlField source="liveUrl" content="Visit Live Website" />
-      <UrlField source="sourceUrl" content="Source Code" /> */}
+      <UrlField source="sourceUrl" content="Source Code" />
       <MyUrlField source="liveUrl" content="Live" />
       <MyUrlField source="sourceUrl" content="Code" />
       <ImageGalleryField source="images" label="Images" />
+      <TextField source="id" />
       <DateField source="createdAt" />
       <DateField source="updatedAt" />
     </Datagrid>
