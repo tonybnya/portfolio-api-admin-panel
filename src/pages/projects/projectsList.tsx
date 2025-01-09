@@ -49,7 +49,15 @@ const ProjectPanel = () => {
 
 export const ProjectsList = () => (
   <List>
-    <Datagrid expand={ProjectPanel}>
+    <Datagrid
+      expand={ProjectPanel}
+      sx={{
+        ".RaDatagrid-headerCell": {
+          padding: "16px",
+          fontSize: "16px",
+        },
+      }}
+    >
       <ReferenceField source="_id" reference="projects" />
       <TextField source="id" />
       <TextField source="title" />
