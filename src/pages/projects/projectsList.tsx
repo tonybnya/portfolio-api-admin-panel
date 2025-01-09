@@ -9,6 +9,7 @@ import {
 } from "react-admin";
 
 import { useRecordContext } from "react-admin";
+import MyUrlField from "../../components/MyUrlField";
 
 const TagsField = () => {
   const record = useRecordContext();
@@ -68,8 +69,10 @@ export const ProjectsList = () => (
       />
 
       <TagsField source="tags" />
-      <UrlField source="liveUrl" content="Visit Live Website" />
-      <UrlField source="sourceUrl" content="Source Code" />
+      {/* <UrlField source="liveUrl" content="Visit Live Website" />
+      <UrlField source="sourceUrl" content="Source Code" /> */}
+      <MyUrlField source="liveUrl" content="Live" />
+      <MyUrlField source="sourceUrl" content="Code" />
       <DateField source="createdAt" />
       <DateField source="updatedAt" />
     </Datagrid>
