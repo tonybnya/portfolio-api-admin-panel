@@ -68,8 +68,8 @@ export const ProjectsList = () => (
       />
 
       <TagsField source="tags" />
-      <UrlField source="liveUrl" />
-      <UrlField source="sourceUrl" />
+      <UrlField source="liveUrl" content="Visit Live Website" />
+      <UrlField source="sourceUrl" content="Source Code" />
       <DateField source="createdAt" />
       <DateField source="updatedAt" />
     </Datagrid>
