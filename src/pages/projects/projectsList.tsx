@@ -1,6 +1,7 @@
 import {
   Datagrid,
   DateField,
+  FunctionField,
   List,
   ReferenceField,
   TextField,
@@ -47,7 +48,12 @@ export const ProjectsList = () => (
       <ReferenceField source="_id" reference="projects" />
       <TextField source="id" />
       <TextField source="title" />
-      <TextField source="description" />
+      {/* <TextField source="description" /> */}
+      <FunctionField
+        label="Excerpt"
+        render={(record) => `${record.description.substring(0, 50)}...`}
+      />
+
       <TagsField source="tags" />
       <UrlField source="liveUrl" />
       <UrlField source="sourceUrl" />
