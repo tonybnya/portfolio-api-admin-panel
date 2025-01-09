@@ -25,9 +25,12 @@ const TagsField = () => {
         <li
           key={tag}
           style={{
-            background: "#e0e0e0",
+            background: "#eab330",
+            color: "#000",
+            width: "150px",
+            textAlign: "center",
             padding: "4px 8px",
-            borderRadius: "16px",
+            borderRadius: "5px",
             fontSize: "0.875rem",
           }}
         >
@@ -42,14 +45,14 @@ export const ProjectsList = () => (
   <List>
     <Datagrid>
       <ReferenceField source="_id" reference="projects" />
+      <TextField source="id" />
       <TextField source="title" />
       <TextField source="description" />
-      <TagsField />
+      <TagsField source="tags" />
       <UrlField source="liveUrl" />
       <UrlField source="sourceUrl" />
       <DateField source="createdAt" />
       <DateField source="updatedAt" />
-      <TextField source="id" />
     </Datagrid>
   </List>
 );
