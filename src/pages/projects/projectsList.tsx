@@ -3,7 +3,6 @@ import {
   DateField,
   FunctionField,
   List,
-  ReferenceField,
   TextField,
   UrlField,
 } from "react-admin";
@@ -32,17 +31,17 @@ export const ProjectsList = () => (
       <TextField source="title" />
       <FunctionField
         label="Excerpt"
-        render={(record) => `${record.description.substring(0, 50)}...`}
+        render={(record) => `${record.description.substring(0, 30)}...`}
       />
 
-      <TagsField source="tags" />
-      <UrlField source="sourceUrl" content="Source Code" />
-      <MyUrlField source="liveUrl" content="Live" />
-      <MyUrlField source="sourceUrl" content="Code" />
+      <TagsField source="tags" label="Tech Stack" />
+      {/* <UrlField source="sourceUrl" content="Source Code" label="Source Code" /> */}
+      <MyUrlField source="liveUrl" content="Live" label="Live Website" />
+      <MyUrlField source="sourceUrl" content="Code" label="Source Code" />
       <ImageGalleryField source="images" label="Images" />
-      <TextField source="id" />
-      <DateField source="createdAt" />
-      <DateField source="updatedAt" />
+      <TextField source="id" label="ID" />
+      <DateField source="createdAt" label="Creation Date" />
+      <DateField source="updatedAt" label="Update Date" />
     </Datagrid>
   </List>
 );
