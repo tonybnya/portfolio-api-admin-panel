@@ -4,10 +4,9 @@ import {
   FunctionField,
   List,
   TextField,
-  UrlField,
+  useRecordContext,
 } from "react-admin";
 
-import { useRecordContext } from "react-admin";
 import ImageGalleryField from "../../components/ImageGalleryField";
 import MyUrlField from "../../components/MyUrlField";
 import TagsField from "../../components/TagsField";
@@ -33,9 +32,7 @@ export const ProjectsList = () => (
         label="Excerpt"
         render={(record) => `${record.description.substring(0, 30)}...`}
       />
-
       <TagsField source="tags" label="Tech Stack" />
-      {/* <UrlField source="sourceUrl" content="Source Code" label="Source Code" /> */}
       <MyUrlField source="liveUrl" content="Live" label="Live Website" />
       <MyUrlField source="sourceUrl" content="Code" label="Source Code" />
       <ImageGalleryField source="images" label="Images" />
