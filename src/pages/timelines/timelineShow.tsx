@@ -1,7 +1,6 @@
 import {
   DateField,
   NumberField,
-  ReferenceField,
   Show,
   SimpleShowLayout,
   TextField,
@@ -10,7 +9,6 @@ import {
 const TimelineShow = () => (
   <Show>
     <SimpleShowLayout>
-      <ReferenceField source="_id" reference="s" />
       <NumberField source="year" />
       <TextField source="timeline" />
       <TextField source="duration" />

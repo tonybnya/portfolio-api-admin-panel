@@ -1,4 +1,4 @@
-import { Admin, Resource, ShowGuesser } from "react-admin";
+import { Admin, Resource, ShowGuesser, EditGuesser } from "react-admin";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 
@@ -9,6 +9,7 @@ import TimelineIcon from "@mui/icons-material/Timeline";
 
 import ProjectsList from "./pages/projects/projectsList";
 import ProjectShow from "./pages/projects/projectShow";
+import ProjectEdit from "./pages/projects/projectEdit";
 
 import TimelinesList from "./pages/timelines/timelinesList";
 import TimelineShow from "./pages/timelines/timelineShow";
@@ -19,6 +20,7 @@ export const App = () => (
       name="projects"
       list={ProjectsList}
       show={ProjectShow}
+      edit={ProjectEdit}
       icon={TerminalIcon}
     />
     <Resource

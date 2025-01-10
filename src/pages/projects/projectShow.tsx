@@ -1,15 +1,8 @@
-import {
-  DateField,
-  ReferenceField,
-  Show,
-  SimpleShowLayout,
-  TextField,
-} from "react-admin";
+import { DateField, Show, SimpleShowLayout, TextField } from "react-admin";
 
 const ProjectShow = () => (
   <Show>
     <SimpleShowLayout>
-      <ReferenceField source="_id" reference="s" />
       <TextField source="title" />
       <TextField source="description" />
       <TextField source="tags" />
