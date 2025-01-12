@@ -1,14 +1,3 @@
-// import { Card, CardContent, CardHeader } from "@mui/material";
-
-// const Dashboard = () => (
-//   <Card>
-//     <CardHeader title="Welcome to My Portfolio API Administration Panel" />
-//     <CardContent>Lorem ipsum sic dolor amet...</CardContent>
-//   </Card>
-// );
-
-// export default Dashboard;
-
 import {
   Card,
   CardContent,
@@ -23,7 +12,7 @@ import TimelineIcon from "@mui/icons-material/Timeline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InfoIcon from "@mui/icons-material/Info";
 
-const Dashboard = () => (
+const HomePage = () => (
   <Box sx={{ padding: 4, backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
     <Card sx={{ mb: 4, boxShadow: 3 }}>
       <CardHeader
@@ -129,4 +118,4 @@ const Dashboard = () => (
   </Box>
 );
 
-export default Dashboard;
+export default HomePage;

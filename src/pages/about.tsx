@@ -47,13 +47,6 @@ const About = () => (
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               Base URL:
             </Typography>
-            {/* <Link
-              href="https://portfolio-api-nq76.onrender.com"
-              target="_blank"
-              sx={{ wordBreak: "break-all" }}
-            >
-              https://portfolio-api-nq76.onrender.com
-            </Link> */}
             <Link
               href="https://portfolio-api-nq76.onrender.com/api"
               target="_blank"
