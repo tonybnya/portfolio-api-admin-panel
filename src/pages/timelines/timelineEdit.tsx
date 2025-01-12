@@ -6,18 +6,20 @@ import {
   TextInput,
 } from "react-admin";
 
-const TimelineEdit = () => (
-  <Edit>
-    <SimpleForm>
-      <NumberInput source="year" />
-      <TextInput source="timeline" />
-      <TextInput source="duration" />
-      <TextInput source="details" />
-      <TextInput source="id" />
-      <DateInput source="createdAt" />
-      <DateInput source="updatedAt" />
-    </SimpleForm>
-  </Edit>
-);
+const TimelineEdit = () => {
+  return (
+    <Edit>
+      <SimpleForm>
+        <NumberInput source="year" />
+        <TextInput source="timeline" />
+        <TextInput source="duration" />
+        <TextInput source="details" />
+        <TextInput source="id" />
+        <DateInput source="createdAt" />
+        <DateInput source="updatedAt" />
+      </SimpleForm>
+    </Edit>
+  );
+};
 
 export default TimelineEdit;

@@ -27,7 +27,6 @@ export const App = () => (
       show={ProjectShow}
       edit={ProjectEdit}
       icon={WorkOutlineIcon}
-      // icon={TerminalIcon}
     />
     <Resource
       name="timelines"
@@ -37,7 +36,6 @@ export const App = () => (
       create={TimelineCreate}
       icon={TimelineIcon}
     />
-    {/* <CustomRoute path="/about" component={About} /> */}
     <CustomRoutes>
       <Route path="/about" element={<About />} />
     </CustomRoutes>
