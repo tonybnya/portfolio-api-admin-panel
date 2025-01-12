@@ -1,7 +1,9 @@
-import { Admin, Resource } from "react-admin";
+import { Admin, CustomRoutes, Resource } from "react-admin";
+import { Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 
+import About from "./About";
 import Dashboard from "./Dashboard";
 
 // import TerminalIcon from "@mui/icons-material/Terminal";
@@ -35,5 +37,9 @@ export const App = () => (
       create={TimelineCreate}
       icon={TimelineIcon}
     />
+    {/* <CustomRoute path="/about" component={About} /> */}
+    <CustomRoutes>
+      <Route path="/about" element={<About />} />
+    </CustomRoutes>
   </Admin>
 );
