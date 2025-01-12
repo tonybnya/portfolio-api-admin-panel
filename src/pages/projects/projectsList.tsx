@@ -1,6 +1,7 @@
 import {
   Datagrid,
   DateField,
+  DeleteButton,
   EditButton,
   FunctionField,
   List,
@@ -43,6 +44,7 @@ const ProjectsList = () => {
         <ImageGalleryField source="images" label="Images" />
         <TextField source="id" label="ID" />
         <EditButton label="Update Project" />
+        <DeleteButton label="Delete Project" />
         <DateField source="createdAt" label="Creation Date" />
         <DateField source="updatedAt" label="Update Date" />
       </Datagrid>

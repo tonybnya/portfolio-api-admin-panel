@@ -2,6 +2,7 @@ import { Admin, CustomRoutes, Resource } from "react-admin";
 import { Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
+import { authProvider } from "./authProvider";
 
 import About from "./pages/about";
 import HomePage from "./pages/homepage";
@@ -21,7 +22,12 @@ import TimelineShow from "./pages/timelines/timelineShow";
 import TimelineEdit from "./pages/timelines/timelineEdit";
 
 export const App = () => (
-  <Admin layout={Layout} dataProvider={dataProvider} dashboard={HomePage}>
+  <Admin
+    layout={Layout}
+    dataProvider={dataProvider}
+    dashboard={HomePage}
+    authProvider={authProvider}
+  >
     <Resource
       name="projects"
       list={ProjectsList}

@@ -91,7 +91,29 @@ export const dataProvider: DataProvider = {
 
   updateMany: () => Promise.resolve({ data: [] }),
 
-  delete: () => Promise.resolve({ data: null as any }),
+  delete: (resource, params) => {
+    const url = `${apiUrl}/${resource.slice(0, -1)}/${params.id}`;
+    console.log("Attempting to delete:", url);
+
+    return httpClient(url, {
+      method: "DELETE",
+    })
+      .then(({ json }) => {
+        console.log("Delete response:", json);
+        return {
+          data: {
+            ...json,
+            id: json._id,
+            createdAt: new Date(json.createdAt),
+            updatedAt: new Date(json.updatedAt),
+          },
+        };
+      })
+      .catch((error) => {
+        console.error("Delete error:", error);
+        throw error;
+      });
+  },
 
   deleteMany: () => Promise.resolve({ data: [] }),
 };

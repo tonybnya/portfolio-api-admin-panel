@@ -1,6 +1,7 @@
 import {
   Datagrid,
   DateField,
+  DeleteButton,
   EditButton,
   FunctionField,
   List,
@@ -34,6 +35,7 @@ const TimelinesList = () => {
         />
         <TextField source="id" label="ID" />
         <EditButton label="Update Timeline" />
+        <DeleteButton label="Delete Timeline" />
         <DateField source="createdAt" label="Creation Date" />
         <DateField source="updatedAt" label="Update Date" />
       </Datagrid>
