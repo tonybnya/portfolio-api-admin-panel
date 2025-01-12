@@ -10,7 +10,8 @@ const httpClient = fetchUtils.fetchJson;
 export const dataProvider: DataProvider = {
   getList: (resource, params) => {
     const { page = 1, perPage = 10 } = params.pagination || {};
-    const { field = "id", order = "ASC" } = params.sort || {};
+    // const { field = "id", order = "ASC" } = params.sort || {};
+    const { field = "createdAt", order = "DESC" } = params.sort || {};
     const query = {
       sort: JSON.stringify([field, order]),
       range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
@@ -62,7 +63,10 @@ export const dataProvider: DataProvider = {
   create: (resource, params) =>
     httpClient(`${apiUrl}/${resource}`, {
       method: "POST",
-      body: JSON.stringify(params.data),
+      body: JSON.stringify({
+        ...params.data,
+        createdAt: new Date().toISOString(),
+      }),
     }).then(({ json }) => ({
       data: {
         ...params.data,
