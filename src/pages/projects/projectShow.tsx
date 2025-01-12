@@ -11,7 +11,6 @@ const ProjectShow = () => (
       <TextField source="sourceUrl" />
       <DateField source="createdAt" />
       <DateField source="updatedAt" />
-      <DateField source="__v" />
       <TextField source="id" />
     </SimpleShowLayout>
   </Show>
