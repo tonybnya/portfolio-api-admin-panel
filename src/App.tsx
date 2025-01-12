@@ -1,4 +1,4 @@
-import { Admin, Resource, ShowGuesser, EditGuesser } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 
@@ -13,6 +13,7 @@ import ProjectEdit from "./pages/projects/projectEdit";
 
 import TimelinesList from "./pages/timelines/timelinesList";
 import TimelineShow from "./pages/timelines/timelineShow";
+import TimelineEdit from "./pages/timelines/timelineEdit";
 
 export const App = () => (
   <Admin layout={Layout} dataProvider={dataProvider} dashboard={Dashboard}>
@@ -27,6 +28,7 @@ export const App = () => (
       name="timelines"
       list={TimelinesList}
       show={TimelineShow}
+      edit={TimelineEdit}
       icon={TimelineIcon}
     />
   </Admin>
