@@ -1,6 +1,7 @@
 import {
   Datagrid,
   DateField,
+  EditButton,
   FunctionField,
   List,
   TextField,
@@ -32,6 +33,7 @@ const TimelinesList = () => {
           render={(record) => `${record.details.substring(0, 30)}...`}
         />
         <TextField source="id" label="ID" />
+        <EditButton label="Update Timeline" />
         <DateField source="createdAt" label="Creation Date" />
         <DateField source="updatedAt" label="Update Date" />
       </Datagrid>

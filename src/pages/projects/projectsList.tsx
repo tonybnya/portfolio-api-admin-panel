@@ -1,6 +1,7 @@
 import {
   Datagrid,
   DateField,
+  EditButton,
   FunctionField,
   List,
   TextField,
@@ -37,6 +38,7 @@ export const ProjectsList = () => (
       <MyUrlField source="sourceUrl" content="Code" label="Source Code" />
       <ImageGalleryField source="images" label="Images" />
       <TextField source="id" label="ID" />
+      <EditButton label="Update Project" />
       <DateField source="createdAt" label="Creation Date" />
       <DateField source="updatedAt" label="Update Date" />
     </Datagrid>
