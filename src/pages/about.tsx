@@ -54,6 +54,16 @@ const About = () => (
             >
               https://portfolio-api-nq76.onrender.com/api
             </Link>
+            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              Source Code:
+            </Typography>
+            <Link
+              href="https://github.com/tonybnya/portfolio-api"
+              target="_blank"
+              sx={{ wordBreak: "break-all" }}
+            >
+              https://github.com/tonybnya/portfolio-api
+            </Link>
           </CardContent>
         </Card>
       </Grid>
